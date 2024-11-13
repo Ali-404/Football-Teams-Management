@@ -82,7 +82,7 @@ export default function Register() {
               render={({field}) => (
                 <FormItem className='w-full'>
                   <FormControl>
-                    <Input autoComplete='email' type='email' placeholder='Email' {...field} />
+                    <Input autoComplete='email'  placeholder='Email' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
