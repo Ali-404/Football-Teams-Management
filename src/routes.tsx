@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 
@@ -11,7 +12,7 @@ const RoutesArray:RouteObject[] = [
     },
     {
         path: "/signup",
-        element: <div>Sign Up</div>
+        element: <Register />
     },
     {
         path: "/",

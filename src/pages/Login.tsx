@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button'
 import Hr from '@/components/ui/hr'
 import { FacebookIcon } from 'lucide-react'
 import { Separator } from '@radix-ui/react-separator'
+import { Link } from 'react-router-dom'
  
 const loginFormShema = z.object({
   username: z.string(),
@@ -90,6 +91,7 @@ export default function Login() {
             />
 
             <Button type='submit' className='shadow w-full'>Login</Button>
+            <div>I Dont have an account! <Link to={"/signup"} className='text-emerald-600 underline' >Sign Up</Link> </div>
             <Hr className='w-full'>or continue with</Hr>
             <Button type='button'  className='text-white shadow w-full bg-blue-600 hover:bg-blue-700 '> <FacebookIcon /> Sign in with Facebook</Button>
           </form>
@@ -99,7 +101,7 @@ export default function Login() {
       </div>
 
         {/* rights */}
-        <span className='absolute bottom-0 right-0 m-5'>By ALi-<b className="font-bold text-blue-500">404</b> </span>
+        <span className='absolute bottom-0 right-0 m-5 opacity-70'>By ALi-<b className="font-bold text-blue-500">404</b> </span>
     </div>
   )
 }
