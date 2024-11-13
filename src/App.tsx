@@ -4,7 +4,9 @@ import Routes from "./routes"
 
 const App: FC = () => {
   return (
-    <RouterProvider router={Routes} fallbackElement={<>Loading ...</>} />
+    <RouterProvider 
+    router={Routes}
+    />
   )
 }
 
