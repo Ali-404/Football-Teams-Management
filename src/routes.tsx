@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
+import MainLayout from "./pages/Layout/MainLayout";
 
 
 
@@ -16,13 +17,20 @@ const RoutesArray:RouteObject[] = [
     },
     {
         path: "/",
-        element: <div>Clubs</div>
+        element: <MainLayout />,
+        children: [
+            {
+                path:"/formations",
+            },
+            {
+                path:"/transer_window",
+            },
+            {
+                path: 'matches'
+            }
+        ]
     },
-    {
-        path: "/:clube_id",
-        element: <div>Main Layout</div>,
-        
-    }
+    
 ]
 const Routes = createBrowserRouter(RoutesArray);
 
