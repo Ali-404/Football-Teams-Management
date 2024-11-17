@@ -53,7 +53,7 @@ export function AppSidebar() {
 
 
   return (
-    <div className="bg-slate-900 h-dvh min-w-10  p-2 flex flex-col gap-5 items-center ">
+    <div className="h-dvh bg-slate-900 min-w-10  p-2 flex flex-col gap-5 items-center ">
         
         {/* club budge render */}
         <Avatar  className="w-[44px] rounded-full overflow-hidden text-slate-50 cursor-pointer hover:scale-105  transition-transform">
