@@ -1,10 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar"
 import { LayoutDashboard, UserPlus, Volleyball } from "lucide-react"
 import { useEffect, useState } from "react"
-import Tacticts from "../icons/tacticts"
 import { useLocation, useNavigate } from "react-router-dom"
 
 import {motion} from 'motion/react'
+import Tacticts from "../icons/Tacticts"
 
 
 // Menu items.
@@ -53,10 +53,10 @@ export function AppSidebar() {
 
 
   return (
-    <div className="bg-slate-900 h-dvh min-w-10 rounded-tr-2xl rounded-br-2xl p-4 flex flex-col gap-5 items-center">
+    <div className="bg-slate-900 h-dvh min-w-10  p-2 flex flex-col gap-5 items-center ">
         
         {/* club budge render */}
-        <Avatar  className="w-[44px] rounded-full overflow-hidden text-slate-50">
+        <Avatar  className="w-[44px] rounded-full overflow-hidden text-slate-50 cursor-pointer hover:scale-105  transition-transform">
             <AvatarImage src="https://seeklogo.com/images/R/real-madrid-logo-77A97A4A0E-seeklogo.com.png" />
             <AvatarFallback>CN</AvatarFallback>
         </Avatar>
@@ -66,12 +66,15 @@ export function AppSidebar() {
         {items.map((tab,i) => (
             <motion.button 
             key={i}
-             onClick={() => SwitchRoute(i)} className={`p-2 rounded-full ${selectedTab == i && 'bg-emerald-100 '} `}
+             onClick={() => SwitchRoute(i)} 
+             className={`cursor-pointer p-1 rounded-full ${selectedTab == i && 'bg-emerald-100 '} `}
              
-
+             whileTap={{scale:1.5, transition: {duration: 2}}}
+             whileFocus={{outlineColor: "Background"}}
+             whileHover={{scale:1.2, transition: {duration: 0.5}}}
 
              >
-                {<tab.icon className={ selectedTab == i ? `text-slate-900` : 'text-emerald-300 ' } />}
+                {<tab.icon className={ ` w-5 h-5  ${selectedTab == i ? 'text-slate-900  ' : 'text-emerald-300 fill-emerald-300'}`  } />}
             </motion.button>
         ))}
     </div>

@@ -4,7 +4,7 @@ const Tacticts:FC<{className?: string}> = ({className})  => {
   const fill = className?.replace("text-", "fill-")
   return (
     <svg className={fill} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
-	 width="20px" height="20px" viewBox="0 0 360.001 360.001"
+	 viewBox="0 0 360.001 360.001"
 	 xmlSpace="preserve">
 <g>
 	<g>
