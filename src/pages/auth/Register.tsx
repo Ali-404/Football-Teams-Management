@@ -16,6 +16,7 @@ import Hr from '@/components/ui/hr'
 import { FacebookIcon } from 'lucide-react'
 import { Separator } from '@radix-ui/react-separator'
 import { Link } from 'react-router-dom'
+import AnimatedContainer from '@/animated/AnimatedContainer'
  
 const RegisterFormShema = z.object({
   email: z.string().email(),
@@ -55,10 +56,10 @@ export default function Register() {
     }
 
   return (
-    <div className='flex min-h-dvh flex-row-reverse '>
+    <AnimatedContainer className='flex min-h-dvh flex-row-reverse bg-slate-100'>
       
       {/* img */}
-      <div className='bg-slate-600 flex-1 hidden md:flex bg-[url(images/3.jpeg)] bg-cover shadow-lg backdrop-blur  flex-col p-5 '>
+      <div className='bg-slate-600 flex-1 hidden md:flex bg-[url(images/3.jpeg)] bg-cover shadow-lg backdrop-blur rounded-tr-xl rounded-br-xl flex-col p-5 '>
       
       <h1 className='text-2xl text-right'>Logo</h1>
       <Separator className='flex-1' />
@@ -68,7 +69,7 @@ export default function Register() {
 
       <div className='flex-1 flex flex-col items-center justify-center '>
         <Form   {...form}>
-          <form className='  flex flex-col items-center justify-center gap-2  md:min-w-[30vw]' onSubmit={form.handleSubmit(onSubmit)}>
+          <form className='backdrop-blur-xl  bg-white bg-opacity-50 drop-shadow-2xl p-8 rounded-xl  flex flex-col items-center justify-center gap-2  md:min-w-[30vw]' onSubmit={form.handleSubmit(onSubmit)}>
             <h1 className='text-3xl font-medium'>Create your account</h1>
             <h5 className='text-gray-600 font-medium mb-3'>Enter your account's information to Register</h5>
         
@@ -149,6 +150,6 @@ export default function Register() {
 
         {/* rights */}
         <span className='absolute bottom-0 left-0 m-5 opacity-70 '>By ALi-<b className="font-bold text-blue-500">404</b> </span>
-    </div>
+    </AnimatedContainer>
   )
 }
