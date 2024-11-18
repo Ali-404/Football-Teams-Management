@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { ScrollArea } from '../ui/scroll-area'
-import { CapitalizeString } from '@/functions/format'
+import { CapitalizeString, FormatDate } from '@/functions/format'
 
 type ClubeDataType =  {
     logo: string,
@@ -32,7 +32,7 @@ const ClubInformationContainer:FC<{className?: string}> = ({className}) => {
   return (
     <ScrollArea className={'max-h-[50vh] min-w-[300px] rounded-xl overflow-hidden ' +  className}>
 
-    <Card className={' backdrop-blur-xl rounded-2xl shadow-none border-none ' } >
+    <Card style={{backgroundColor: "rgba(255,255,255,0.7)"}} className={' backdrop-blur-xl  rounded-2xl shadow-none border-none ' } >
         <CardHeader className='gap-4'>
             <CardTitle>Clube Information</CardTitle>
             <CardDescription>
@@ -50,7 +50,15 @@ const ClubInformationContainer:FC<{className?: string}> = ({className}) => {
                     {key == 'logo' ? (
                         // load logo as img
                         <img src={ClubeData[key]} className='w-[50px] h-[50px] object-contain' loading='lazy' />                        
-                    ) : (
+                    ) :
+                        
+                    key == "founded" ? 
+                    (
+                        // load a correct date format 
+                        <h3>{FormatDate(ClubeData[key])}</h3>
+                    )
+                    :
+                    (
                         <h3>{ClubeData[key].toString()}</h3>
                     )  }
                 </div>

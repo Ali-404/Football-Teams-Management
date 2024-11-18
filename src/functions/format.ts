@@ -15,3 +15,11 @@ export function CapitalizeString(input: string): string {
         )
         .join(' ');
 }
+
+export function FormatDate(date: Date){
+    return date.toLocaleString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        })
+}

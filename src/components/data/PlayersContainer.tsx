@@ -64,7 +64,7 @@ const Sections = [
 
 const PlayersContainer:FC<{className?: string}> = ({className}) => {
   return (
-    <ScrollArea className={'max-h-[50vh] min-w-[300px] rounded-xl overflow-hidden ' +  className}>
+    <ScrollArea className={'max-h-[80vh] min-w-[300px] rounded-xl overflow-hidden ' +  className}>
 
     <Card className={' backdrop-blur-xl rounded-2xl shadow-none border-none ' }  style={{background: 'rgba(255,255,255,0.6)'}} >
         <CardHeader className='gap-4'>

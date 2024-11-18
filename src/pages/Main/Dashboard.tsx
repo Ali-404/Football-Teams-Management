@@ -15,7 +15,7 @@ const Dashboard:FC = () => {
     <>
     <NavBar >
       <div>
-        <SearchBar />
+        <SearchBar className='text-black'  />
       </div>
       <div></div>
     </NavBar>
