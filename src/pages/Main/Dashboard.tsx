@@ -1,6 +1,7 @@
 import NavBar from '@/components/app/NavBar'
 import SearchBar from '@/components/app/SearchBar'
 import TeamSelector from '@/components/app/TeamSelector'
+import ClubInformationContainer from '@/components/data/ClubInformationContainer'
 import PlayersContainer from '@/components/data/PlayersContainer'
 import { FormatMoney } from '@/functions/format'
 import { Landmark } from 'lucide-react'
@@ -40,8 +41,8 @@ const Dashboard:FC = () => {
 
       {/* cards */}
       <section className='flex gap-2 flex-wrap md:flex-nowrap'>
-        <PlayersContainer className='flex-1' />
         <PlayersContainer  />
+        <ClubInformationContainer className='flex-1' />
       </section>
 
     </div>
