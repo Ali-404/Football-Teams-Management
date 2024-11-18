@@ -32,20 +32,26 @@ const LastMatchesTable:FC = () => {
     </TableCaption>
     <TableHeader>
       <TableRow>
+        <TableHead>Match</TableHead>
         <TableHead >Type</TableHead>
         <TableHead >Date</TableHead>
-        <TableHead>Opposition</TableHead>
-        <TableHead>Score</TableHead>
         <TableHead>Res</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
         {/* rows */}
       <TableRow>
+        <TableCell className='flex items-center'>
+
+          <img loading='lazy' src='https://logodownload.org/wp-content/uploads/2016/03/real-madrid-logo-0.png' className='w-[20px] h-[20px] object-contain'/>
+          
+            <p>5-1</p>
+          
+          <img loading='lazy' src='https://static.cdnlogo.com/logos/f/29/fc-barcelona.png' className='w-[20px] h-[20px] object-contain'/>
+        
+        </TableCell>
         <TableCell >Home</TableCell>
         <TableCell >{FormatDate(new Date())}</TableCell>
-        <TableCell>Barcelona</TableCell>
-        <TableCell>0-4</TableCell>
         <TableCell className='text-red-500 font-bold'>L</TableCell>
       </TableRow>
     </TableBody>
