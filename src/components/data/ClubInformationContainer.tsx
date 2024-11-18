@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { ScrollArea } from '../ui/scroll-area'
 import { CapitalizeString, FormatDate } from '@/functions/format'
+import { CardClasseName, CardScrollViewClassName } from '../common/Common'
 
 type ClubeDataType =  {
     logo: string,
@@ -30,9 +31,9 @@ const ClubeData:ClubeDataType = {
 
 const ClubInformationContainer:FC<{className?: string}> = ({className}) => {
   return (
-    <ScrollArea className={'max-h-[50vh] min-w-[300px] rounded-xl overflow-hidden ' +  className}>
+    <ScrollArea className={CardScrollViewClassName +  className}>
 
-    <Card style={{backgroundColor: "rgba(255,255,255,0.7)"}} className={' backdrop-blur-xl  rounded-2xl shadow-none border-none ' } >
+    <Card style={{backgroundColor: "rgba(255,255,255,0.7)"}} className={CardClasseName } >
         <CardHeader className='gap-4'>
             <CardTitle>Clube Information</CardTitle>
             <CardDescription>

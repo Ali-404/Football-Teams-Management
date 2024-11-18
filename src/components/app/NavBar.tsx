@@ -9,7 +9,7 @@ import { Button } from '../ui/button'
 
 const NavBar:FC<{children?: ReactNode}> = ({children}) => {
   return (
-    <nav className='flex items-center justify-between px-8 py-4 '>
+    <nav className='flex items-center justify-between px-8 py-4 gap-3'>
 
        {/* DYNAMIC CHILDRENS */}
 

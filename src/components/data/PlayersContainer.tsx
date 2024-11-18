@@ -5,6 +5,7 @@ import { ScrollArea } from '../ui/scroll-area'
 import { Button } from '../ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar'
 import { FormatMoney } from '@/functions/format'
+import { CardClasseName, CardScrollViewClassName } from '../common/Common'
 
 
 const Sections = [
@@ -64,9 +65,9 @@ const Sections = [
 
 const PlayersContainer:FC<{className?: string}> = ({className}) => {
   return (
-    <ScrollArea className={'max-h-[80vh] min-w-[300px] rounded-xl overflow-hidden ' +  className}>
+    <ScrollArea className={CardScrollViewClassName +  className}>
 
-    <Card className={' backdrop-blur-xl rounded-2xl shadow-none border-none ' }  style={{background: 'rgba(255,255,255,0.6)'}} >
+    <Card className={CardClasseName}  style={{background: 'rgba(255,255,255,0.6)'}} >
         <CardHeader className='gap-4'>
             <CardTitle>Players</CardTitle>
             <CardDescription>

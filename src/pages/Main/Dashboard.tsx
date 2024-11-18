@@ -1,7 +1,9 @@
 import NavBar from '@/components/app/NavBar'
 import SearchBar from '@/components/app/SearchBar'
 import TeamSelector from '@/components/app/TeamSelector'
+import { MatchesToGoalsChart } from '@/components/charts/MatchesToGoalsChart'
 import ClubInformationContainer from '@/components/data/ClubInformationContainer'
+import LastMatchesCard from '@/components/data/LastMatchesCard'
 import PlayersContainer from '@/components/data/PlayersContainer'
 import { FormatMoney } from '@/functions/format'
 import { Landmark } from 'lucide-react'
@@ -14,15 +16,13 @@ const Dashboard:FC = () => {
   return (
     <>
     <NavBar >
-      <div>
-        <SearchBar className='text-black'  />
-      </div>
+      <SearchBar className='text-black'  />
       <div></div>
     </NavBar>
     <div className='container px-4 md:px-20  py-8 flex flex-col gap-4'>
 
       {/* top sectin */}
-      <section className='flex items-center justify-between'>
+      <section className='flex items-center justify-between flex-wrap gap-4'>
         {/* current team popup */}
         <TeamSelector/>
 
@@ -40,9 +40,15 @@ const Dashboard:FC = () => {
 
 
       {/* cards */}
-      <section className='flex gap-2 flex-wrap md:flex-nowrap'>
-        <PlayersContainer  />
+      <section className='flex gap-2 justify-center items-center flex-wrap'>
+        <PlayersContainer className='flex-1' />
         <ClubInformationContainer className='flex-1' />
+        <LastMatchesCard className='flex-1'  />
+      </section>
+        
+      {/* charts */}
+      <section className='flex items-center gap-2'>
+        <MatchesToGoalsChart/>
       </section>
 
     </div>
