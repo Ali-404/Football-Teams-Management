@@ -1,6 +1,7 @@
 import NavBar from '@/components/app/NavBar'
 import SearchBar from '@/components/app/SearchBar'
 import TeamSelector from '@/components/app/TeamSelector'
+import { GoalsChart } from '@/components/charts/GoalsChart'
 import { MatchesToGoalsChart } from '@/components/charts/MatchesToGoalsChart'
 import ClubInformationContainer from '@/components/data/ClubInformationContainer'
 import LastMatchesCard from '@/components/data/LastMatchesCard'
@@ -49,6 +50,7 @@ const Dashboard:FC = () => {
       {/* charts */}
       <section className='flex items-center gap-2'>
         <MatchesToGoalsChart/>
+        <GoalsChart />
       </section>
 
     </div>
