@@ -19,7 +19,7 @@ const MainLayout:FC = () => {
           {/* circle */}
             {/* <div className='pointer-events-none  fixed-center w-[40vw] blur-2xl opacity-20 h-[80vh]  bg-emerald-100 rounded-full rounded-br-sm rounded-bl-sm z-0  '>
             </div> */}
-            <div className='w-full h-full overflow-auto z-10 text-slate-100'>
+            <div className='w-full h-full overflow-auto z-10 text-slate-100 bg-emerald-500 bg-opacity-20'>
                 <Outlet />
             </div>
         </AnimatedContainer>
