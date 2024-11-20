@@ -1,3 +1,4 @@
+import AnimatedContainer from '@/animated/AnimatedContainer'
 import NavBar from '@/components/app/NavBar'
 import SearchBar from '@/components/app/SearchBar'
 import TeamSelector from '@/components/app/TeamSelector'
@@ -15,7 +16,7 @@ const Dashboard:FC = () => {
 
 
   return (
-    <>
+    <AnimatedContainer>
     <NavBar >
       <SearchBar className='text-black'  />
       <div></div>
@@ -54,7 +55,7 @@ const Dashboard:FC = () => {
       </section>
 
     </div>
-    </>
+    </AnimatedContainer>
   )
 }
 

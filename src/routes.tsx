@@ -3,6 +3,7 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import MainLayout from "./pages/Layout/MainLayout";
 import Dashboard from "./pages/Main/Dashboard";
+import PlayerSearchPage from "./pages/player/Main";
 
 
 
@@ -25,13 +26,17 @@ const RoutesArray:RouteObject[] = [
                 element: <Dashboard />
             },
             {
+                path: '/players',
+                element: <PlayerSearchPage />
+            },
+            {
                 path:"/formations",
             },
             {
                 path:"/transer_window",
             },
             {
-                path: 'matches'
+                path: '/matches'
             }
         ]
     },

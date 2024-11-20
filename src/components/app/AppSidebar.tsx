@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar"
-import { LayoutDashboard, UserPlus, Volleyball } from "lucide-react"
+import { LayoutDashboard, User, UserPlus, Volleyball } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
@@ -13,6 +13,11 @@ const items = [
     title: "Dashboard",
     url: "/",
     icon: LayoutDashboard,
+  },
+  {
+    title: "Players",
+    url: "/players",
+    icon: User ,
   },
   {
     title: "Formations",

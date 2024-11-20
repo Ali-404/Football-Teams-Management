@@ -1,10 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
+import { Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -20,7 +19,7 @@ import {
 } from "@/components/ui/popover"
 import { CapitalizeString } from "@/functions/format"
 
-const frameworks = [
+const clubes = [
   {
     value: "real_madrid",
   },
@@ -57,12 +56,12 @@ export function ClubeSelectPop({children, openState, valueState}: IClubeSelectPo
         
       </PopoverTrigger>
       <PopoverContent className="w-[400px] p-0 " >
-        <Command  className="*:bg-[rgba(255,255,255,0.4)]">
+        <Command  className="*:bg-[rgba(255,255,255,0.4)] text-4xl">
           <CommandInput placeholder="Search clube..." />
           <CommandList>
             <CommandEmpty>No Clube found.</CommandEmpty>
             <CommandGroup>
-              {frameworks.map((clube) => (
+              {clubes.map((clube) => (
                 <CommandItem
                   key={clube.value}
                   value={clube.value}
