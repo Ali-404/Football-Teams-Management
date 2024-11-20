@@ -84,7 +84,7 @@ const PlayersContainer:FC<{className?: string}> = ({className}) => {
                     <div key={i}>
                     <small className='text-slate-400 '>{s.title}</small>
                     <ScrollArea  className=' h-[200px] px-1'>
-                        {s.playersState.map((p,pi) => <Tab key={pi} /> )}
+                        {s.playersState.map((_,pi) => <Tab key={pi} /> )}
                     </ScrollArea>
                     </div>
                 )
