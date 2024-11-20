@@ -3,7 +3,8 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import MainLayout from "./pages/Layout/MainLayout";
 import Dashboard from "./pages/Main/Dashboard";
-import PlayerSearchPage from "./pages/player/Main";
+import PlayerSearchPage from "./pages/player/PlayerSearchPage";
+import PlayerView from "./pages/player/PlayerView";
 
 
 
@@ -27,7 +28,13 @@ const RoutesArray:RouteObject[] = [
             },
             {
                 path: '/players',
-                element: <PlayerSearchPage />
+                element: <PlayerSearchPage />,
+                
+            },
+            {
+                path: '/players/:player_name',
+                element: <PlayerView />,
+                
             },
             {
                 path:"/formations",

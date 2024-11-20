@@ -16,15 +16,15 @@ const Dashboard:FC = () => {
 
 
   return (
-    <AnimatedContainer>
+    <AnimatedContainer className=''>
     <NavBar >
       <SearchBar className='text-black'  />
       <div></div>
     </NavBar>
-    <div className='container px-4 md:px-20  py-8 flex flex-col gap-4'>
+    <div className='px-4 md:px-20  py-8 flex flex-col gap-4  '>
 
       {/* top sectin */}
-      <section className='flex items-center justify-between flex-wrap gap-4'>
+      <section className='flex items-center justify-between flex-wrap gap-4 '>
         {/* current team popup */}
         <TeamSelector/>
 

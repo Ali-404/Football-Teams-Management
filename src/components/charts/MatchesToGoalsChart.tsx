@@ -36,7 +36,7 @@ const chartConfig = {
 
 export function MatchesToGoalsChart() {
   return (
-    <Card className={ CardClasseName +  ' min-w-[40%] ' }  style={{background: 'rgba(255,255,255,0.8)'}} >
+    <Card className={ CardClasseName +  ' min-w-[350px]  ' }  style={{background: 'rgba(255,255,255,0.8)'}} >
       <CardHeader>
         <CardTitle>Matches/Goals This Month</CardTitle>
         <CardDescription>January - February 2024</CardDescription>

@@ -51,7 +51,11 @@ export function AppSidebar() {
 
 
     useEffect(() => {
-        const i = items.findIndex(e => e.url == location.pathname)
+        // player/:player_name exeptation
+        if (location.pathname.startsWith("/players/") && !location.pathname.endsWith("/players/"))
+          return setSelectedTab(1) 
+
+          const i = items.findIndex(e => e.url == location.pathname)
         setSelectedTab(i)
     }, [location])
 
