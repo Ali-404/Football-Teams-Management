@@ -12,7 +12,7 @@ const MainLayout:FC = () => {
 
      {/* bg-gradient-to-r  from-cyan-100  to-emerald-100 md: */}
     <div className='bg-black flex-1 h-dvh '>
-        <AnimatedContainer className='overflow-hidden w-full h-full rounded-tl-3xl  rounded-bl-3xl  bg-[url(backgrounds/bg1.jpg)]
+        <AnimatedContainer className='overflow-hidden w-full h-full rounded-tl-3xl  rounded-bl-3xl  bg-[url(/backgrounds/bg1.jpg)]
         
         bg-center bg-cover bg-no-repeat
         '>
