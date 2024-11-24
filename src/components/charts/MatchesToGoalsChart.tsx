@@ -63,6 +63,7 @@ export function MatchesToGoalsChart() {
               axisLine={{stroke: "#ffffff"}}
               tick={{stroke: "#ffffff", fontSize: 10}}
               tickMargin={8}
+              
             //   tickFormatter={(value) => value.slice(0, 3)}
             />
             <YAxis

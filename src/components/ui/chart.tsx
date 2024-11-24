@@ -148,7 +148,7 @@ const ChartTooltipContent = React.forwardRef<
 
       if (labelFormatter) {
         return (
-          <div className={cn("font-medium", labelClassName)}>
+          <div className={cn("font-medium ", labelClassName)}>
             {labelFormatter(value, payload)}
           </div>
         )
@@ -234,7 +234,7 @@ const ChartTooltipContent = React.forwardRef<
                     >
                       <div className="grid gap-1.5">
                         {nestLabel ? tooltipLabel : null}
-                        <span className="text-muted-foreground">
+                        <span className="text-black">
                           {itemConfig?.label || item.name}
                         </span>
                       </div>
