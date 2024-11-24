@@ -24,7 +24,7 @@ const PlayerSearchPage:FC = () => {
  
 
   return (
-    <AnimatedContainer className='h-screen flex items-center justify-center flex-col'>
+    <AnimatedContainer className=' h-screen flex items-center justify-center flex-col'>
       <h1 className='text-4xl text-start md:w-[80%] w-[95%] p-3 font-medium flex gap-2 items-center'> <User size={40} /> Real Madrid C.F Players Database</h1>
       <SearchPlayersSelect />
     </AnimatedContainer>
@@ -34,7 +34,7 @@ const PlayerSearchPage:FC = () => {
 
 function SearchPlayersSelect() {
     return (
-      <Command className={"rounded-lg border shadow-md md:w-[80%] md:h-[80%] w-[95%] h-[95%] " + CardClasseName} style={{background: "rgba(255,255,255,0.8)"}}>
+      <Command className={"rounded-lg border shadow-md md:w-[80%] md:h-[80%] w-[95%] h-[95%] " + CardClasseName} >
         <CommandInput placeholder="Type a command or search..." />
         <CommandList className='h-full'>
           <CommandEmpty>No players found.</CommandEmpty>
@@ -42,47 +42,23 @@ function SearchPlayersSelect() {
           {/* goalkeepers */}
           <CommandGroup heading="Goalkeepers">
             {/* item */}
-            <CommandItem >
-              <Avatar className='rounded-full bg-emerald-200  overflow-hidden w-[40px] h-[40px] flex items-center justify-center'>
-                <AvatarImage src='' loading='lazy' className='  object-contain'  />
-                <AvatarFallback >TC</AvatarFallback>
-              </Avatar>
-              <span>T.Courtois</span>
-            </CommandItem>
+            <PlayerTab />
           </CommandGroup>
 
           <CommandGroup heading="Defanders">
             {/* item */}
-            <CommandItem >
-              <Avatar className='rounded-full bg-emerald-200  overflow-hidden w-[40px] h-[40px] flex items-center justify-center'>
-                <AvatarImage src='' loading='lazy' className='  object-contain'  />
-                <AvatarFallback >TC</AvatarFallback>
-              </Avatar>
-              <span>T.Courtois</span>
-            </CommandItem>
+            <PlayerTab />
           </CommandGroup>
 
 
         <CommandGroup heading="Midfilders">
         {/* item */}
-        <CommandItem >
-            <Avatar className='rounded-full bg-emerald-200  overflow-hidden w-[40px] h-[40px] flex items-center justify-center'>
-            <AvatarImage src='' loading='lazy' className='  object-contain'  />
-            <AvatarFallback >TC</AvatarFallback>
-            </Avatar>
-            <span>T.Courtois</span>
-        </CommandItem>
+       <PlayerTab />
         </CommandGroup>
 
         <CommandGroup heading="Forwards">
             {/* item */}
-            <CommandItem >
-              <Avatar className='rounded-full bg-emerald-200  overflow-hidden w-[40px] h-[40px] flex items-center justify-center'>
-                <AvatarImage src='' loading='lazy' className='  object-contain'  />
-                <AvatarFallback >TC</AvatarFallback>
-              </Avatar>
-              <span>T.Courtois</span>
-            </CommandItem>
+           <PlayerTab />
           </CommandGroup>
 
           <CommandSeparator />
@@ -91,6 +67,17 @@ function SearchPlayersSelect() {
     )
   }
   
+
+
+  const PlayerTab:FC = () => {
+    return <CommandItem style={{background: "#dbfaf2"}} >
+    <Avatar className='rounded-full bg-emerald-200  overflow-hidden w-[40px] h-[40px] flex items-center justify-center'>
+      <AvatarImage src='' loading='lazy' className='  object-contain'  />
+      <AvatarFallback >TC</AvatarFallback>
+    </Avatar>
+    <span>T.Courtois</span>
+  </CommandItem> 
+  }
 
 
 export default PlayerSearchPage

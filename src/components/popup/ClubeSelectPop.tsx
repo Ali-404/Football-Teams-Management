@@ -22,6 +22,7 @@ import { CapitalizeString } from "@/functions/format"
 const clubes = [
   {
     value: "real_madrid",
+    
   },
   {
     value: "barcelona",

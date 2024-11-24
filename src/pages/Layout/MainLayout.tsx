@@ -5,13 +5,13 @@ import { Outlet } from 'react-router-dom'
 
 const MainLayout:FC = () => {
   return (
-    <div className='flex '>
+    <div className='flex overflow-hidden'>
       
       {/* vertical nav */}
      <AppSidebar />
 
      {/* bg-gradient-to-r  from-cyan-100  to-emerald-100 md: */}
-    <div className='bg-black flex-1 h-dvh '>
+    <div className='bg-black flex-1'>
         <AnimatedContainer className='overflow-hidden w-full h-full rounded-tl-3xl  rounded-bl-3xl  bg-[url(/backgrounds/bg1.jpg)]
         
         bg-center bg-cover bg-no-repeat

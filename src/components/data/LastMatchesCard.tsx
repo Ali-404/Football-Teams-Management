@@ -10,7 +10,7 @@ const LastMatchesCard:FC<{className?: string}> = ({className}) => {
   return (
     <ScrollArea className={CardScrollViewClassName + " " + className} >
 
-        <Card className={CardClasseName} style={{backgroundColor: "rgba(255,255,255,0.7)"}}>
+        <Card className={CardClasseName} >
         <CardHeader>
             <CardTitle>Last Played Matches</CardTitle>
         </CardHeader>
@@ -28,7 +28,7 @@ const LastMatchesCard:FC<{className?: string}> = ({className}) => {
 const LastMatchesTable:FC = () => {
     return <Table className='w-full h-full'>
     <TableCaption>
-        <Link className='text-emerald-600 underline' to={"/matches"} >Explore More</Link>
+        <Link className='text-emerald-200 underline' to={"/matches"} >Explore More</Link>
     </TableCaption>
     <TableHeader>
       <TableRow>

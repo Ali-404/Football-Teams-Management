@@ -11,6 +11,9 @@ import { FormatMoney } from '@/functions/format'
 import { Landmark } from 'lucide-react'
 import  { FC } from 'react'
 
+
+const sectionClassName = "w-full  flex gap-4 flex-wrap items-center justify-center md:items-start md:justify-start"
+
 const Dashboard:FC = () => {
   
 
@@ -24,7 +27,7 @@ const Dashboard:FC = () => {
     <div className='px-4 md:px-20  py-8 flex flex-col gap-4  '>
 
       {/* top sectin */}
-      <section className='flex items-center justify-between flex-wrap gap-4 '>
+      <section className={"flex items-center justify-between flex-wrap gap-2"}>
         {/* current team popup */}
         <TeamSelector/>
 
@@ -42,14 +45,14 @@ const Dashboard:FC = () => {
 
 
       {/* cards */}
-      <section className='flex gap-2 justify-center items-center flex-wrap'>
-        <PlayersContainer className='flex-1' />
-        <ClubInformationContainer className='flex-1' />
-        <LastMatchesCard className='flex-1'  />
+      <section className={sectionClassName + " "}>
+        <PlayersContainer  />
+        <ClubInformationContainer  />
+        <LastMatchesCard className='md:flex-1 '  />
       </section>
         
       {/* charts */}
-      <section className='flex items-center gap-2'>
+      <section className={sectionClassName}>
         <MatchesToGoalsChart/>
         <GoalsChart />
       </section>

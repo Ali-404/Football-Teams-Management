@@ -6,7 +6,7 @@ import { ClubeSelectPop } from '../popup/ClubeSelectPop'
 const TeamSelector:FC = () => {
   
   const openState = useState<boolean>(false)
-  const valueState = useState<string>("")
+  const valueState = useState<string>("real_madrid")
 
   return (
     <div className='flex items-center gap-2'>

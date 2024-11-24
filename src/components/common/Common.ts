@@ -1,2 +1,2 @@
-export const CardClasseName = "min-w-[300px] backdrop-blur-3xl  rounded-2xl shadow-none border-none h-[50vh]"
+export const CardClasseName = "min-w-[100px] max-w-[300px] md:max-w-[30vw] backdrop-blur-3xl  rounded-2xl shadow-none border-none h-[50vh] bg-emerald-400 bg-opacity-30 text-slate-50 *:*:text-slate-50 *:text-slate-50 "
 export const CardScrollViewClassName ="max-h-[80vh]  min-w-[300px] rounded-xl overflow-hidden "

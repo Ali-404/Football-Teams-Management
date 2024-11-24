@@ -67,7 +67,7 @@ const PlayersContainer:FC<{className?: string}> = ({className}) => {
   return (
     <ScrollArea className={CardScrollViewClassName +  className}>
 
-    <Card className={CardClasseName}  style={{background: 'rgba(255,255,255,0.6)'}} >
+    <Card className={CardClasseName + " "}   >
         <CardHeader className='gap-4'>
             <CardTitle>Players</CardTitle>
             <CardDescription>

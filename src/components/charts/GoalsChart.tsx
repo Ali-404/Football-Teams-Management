@@ -33,8 +33,8 @@ const chartConfig = {
 
 export function GoalsChart() {
   return (
-    <Card style={{background: "rgba(255,255,255,0.8)"}}  className={CardClasseName}>
-      <CardHeader className="items-center pb-0">
+    <Card    className={CardClasseName + " h-auto "}>
+      <CardHeader className=" items-center pb-0">
         <CardTitle>Total Goals</CardTitle>
         <CardDescription>26-25-2020 - Now</CardDescription>
       </CardHeader>

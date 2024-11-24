@@ -30,22 +30,27 @@ const chartConfig = {
   },
   match: {
     label: "Match",
-    color: "hsl(var(--chart-2))",
+    color: "#197bbd",
   }
 } satisfies ChartConfig
 
+
+
+
 export function MatchesToGoalsChart() {
   return (
-    <Card className={ CardClasseName +  ' min-w-[350px]  ' }  style={{background: 'rgba(255,255,255,0.8)'}} >
+    <Card className={ CardClasseName +  ' min-w-[350px] h-auto ' }   >
       <CardHeader>
         <CardTitle>Matches/Goals This Month</CardTitle>
         <CardDescription>January - February 2024</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
-          <LineChart
+          <LineChart 
+            
             accessibilityLayer
             data={chartData}
+            
             margin={{
               left: 12,
               right: 12,
@@ -55,12 +60,15 @@ export function MatchesToGoalsChart() {
             <XAxis
               dataKey="week"
               tickLine={true}
-              axisLine={true}
+              axisLine={{stroke: "#ffffff"}}
+              tick={{stroke: "#ffffff", fontSize: 10}}
               tickMargin={8}
             //   tickFormatter={(value) => value.slice(0, 3)}
             />
             <YAxis
             width={5}
+            axisLine={{stroke: "#ffffff"}}
+              tick={{stroke: "#ffffff", fontSize: 10}}
             />
             <ChartTooltip
               cursor={true}

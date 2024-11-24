@@ -4,6 +4,7 @@ import PlayerViewCard from './_components/PlayerViewCard'
 import PlayerViewInfo from './_components/PlayerViewInfo'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft } from 'lucide-react'
+import { PlayerMarketValueChart } from '@/components/charts/Player/PlayerMarketValueChart'
 
 const PlayerView:FC = () => {
   return (
@@ -14,8 +15,13 @@ const PlayerView:FC = () => {
         <div className='flex-1'>
             <PlayerViewInfo />
         </div>
-
       </section>
+
+      {/* section 2 */}
+      <section className='flex items-center gap-2'>
+        <PlayerMarketValueChart />
+      </section>
+
     </AnimatedContainer>
   )
 }
