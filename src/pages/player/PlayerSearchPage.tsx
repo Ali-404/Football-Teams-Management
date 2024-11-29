@@ -1,6 +1,6 @@
 import AnimatedContainer from '@/animated/AnimatedContainer'
 import { FC } from 'react'
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -70,12 +70,14 @@ function SearchPlayersSelect() {
 
 
   const PlayerTab:FC = () => {
-    return <CommandItem style={{background: "#dbfaf2"}} >
-    <Avatar className='rounded-full bg-emerald-200  overflow-hidden w-[40px] h-[40px] flex items-center justify-center'>
-      <AvatarImage src='' loading='lazy' className='  object-contain'  />
-      <AvatarFallback >TC</AvatarFallback>
-    </Avatar>
-    <span>T.Courtois</span>
+    return <CommandItem style={{background: "#dbfaf2"}}  >
+      <Link to={"/players/1"} className='flex items-center gap-2 flex-1'>
+        <Avatar className='rounded-full bg-emerald-200  overflow-hidden w-[40px] h-[40px] flex items-center justify-center'>
+          <AvatarImage src='' loading='lazy' className='  object-contain'  />
+          <AvatarFallback >TC</AvatarFallback>
+        </Avatar>
+        <span>T.Courtois</span>
+      </Link>
   </CommandItem> 
   }
 
