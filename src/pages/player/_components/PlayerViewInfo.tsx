@@ -1,4 +1,4 @@
-import { CapitalizeString, FormatDate } from '@/functions/format'
+import { CapitalizeString, FormatDate, FormatMoney } from '@/functions/format'
 import  { FC } from 'react'
 
 
@@ -6,8 +6,12 @@ import  { FC } from 'react'
 const PlayerData = {
     date_of_birth: FormatDate(new Date()),
     place_of_birth: "Morocco",
-    position: "ST",
+    main_position: "ST",
     secondary_positions: "LW, RW",
+    total_goals: 100,
+    total_clean_sheets: 0,
+    market_value:FormatMoney(1000)
+
 }
 
 const PlayerViewInfo:FC = () => {
@@ -16,7 +20,7 @@ const PlayerViewInfo:FC = () => {
       {Object.keys(PlayerData).map((data, i) => {
         
         return (
-            <div className='flex flex-col'>
+            <div className='flex flex-col flex-wrap'>
                 <span>{CapitalizeString(data)}</span>
                 <div className='rounded-sm p-2 px-8 border-2 border-emerald-400 '>
                     {Object.values(PlayerData)[i]}

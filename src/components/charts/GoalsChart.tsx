@@ -31,9 +31,9 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function GoalsChart() {
+export function GoalsChart({isPlayer}: {isPlayer?:boolean}) {
   return (
-    <Card    className={CardClasseName + " h-auto "}>
+    <Card    className={CardClasseName + " h-auto min-w-[250px]"}>
       <CardHeader className=" items-center pb-0">
         <CardTitle>Total Goals</CardTitle>
         <CardDescription>26-25-2020 - Now</CardDescription>
@@ -95,7 +95,7 @@ export function GoalsChart() {
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="leading-none text-muted-foreground">
-          Showing total goals since foundation.
+          Showing total goals {!isPlayer && "since foundation"}.
         </div>
       </CardFooter>
     </Card>

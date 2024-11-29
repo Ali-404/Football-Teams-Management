@@ -1,13 +1,11 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -19,28 +17,23 @@ import {
 } from "@/components/ui/chart"
 import { CardClasseName } from "@/components/common/Common"
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "2000", market_value: 186, mobile: 80 },
+  { month: "2005", market_value: 186, mobile: 80 },
+  { month: "2007", market_value: 305, mobile: 200 },
+  { month: "2015", market_value: 237, mobile: 120 },
+  { month: "Now", market_value: 214, mobile: 140 },
 ]
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  market_value: {
+    label: "$F",
     color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
+  }
 } satisfies ChartConfig
 
 export function PlayerMarketValueChart() {
   return (
-    <Card className={CardClasseName + "h-auto"}>
+    <Card className={CardClasseName + "h-auto "}>
       <CardHeader>
         <CardTitle>Market Value (F$)</CardTitle>
         <CardDescription>
@@ -53,8 +46,8 @@ export function PlayerMarketValueChart() {
             accessibilityLayer
             data={chartData}
             margin={{
-              left: 12,
-              right: 12,
+              left: 5,
+              right: 5,
             }}
           >
             <CartesianGrid vertical={false} />
@@ -63,26 +56,18 @@ export function PlayerMarketValueChart() {
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent indicator="dot" />}
+              content={<ChartTooltipContent indicator="dot"  />}
             />
+          
             <Area
-              dataKey="mobile"
+              dataKey="market_value"
               type="natural"
-              fill="var(--color-mobile)"
+              fill="var(--color-market_value)"
               fillOpacity={0.4}
-              stroke="var(--color-mobile)"
-              stackId="a"
-            />
-            <Area
-              dataKey="desktop"
-              type="natural"
-              fill="var(--color-desktop)"
-              fillOpacity={0.4}
-              stroke="var(--color-desktop)"
+              stroke="var(--color-market_value)"
               stackId="a"
             />
           </AreaChart>
