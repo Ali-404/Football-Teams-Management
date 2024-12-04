@@ -1,4 +1,5 @@
 import { CapitalizeString, FormatDate, FormatMoney } from '@/functions/format'
+import { Footprints } from 'lucide-react'
 import  { FC } from 'react'
 
 
@@ -10,7 +11,13 @@ const PlayerData = {
     secondary_positions: "LW, RW",
     total_goals: 100,
     total_clean_sheets: 0,
-    market_value:FormatMoney(1000)
+    market_value:FormatMoney(1000),
+    phone_number: "0614929124",
+    email: "player@gmail.com",
+    height: 180,
+    weight: 70,
+    foot: <div className='flex gap-1 items-center'> <Footprints/>LEFT</div>,
+    highest_match_rating: <p>10.0</p>
 
 }
 

@@ -21,9 +21,9 @@ const PlayerView:FC = () => {
       </section>
 
       {/* section 2 */}
-      <section className='flex  gap-2'>
-        <PlayerMarketValueChart />
-        <PlayerViewClubsHistory />
+      <section className='flex flex-col md:flex-row items-center md:items-start  gap-2 flex-wrap'>
+        <PlayerMarketValueChart  />
+        <PlayerViewClubsHistory className="flex-1 md:max-w-none"  />
         <GoalsChart isPlayer={true}  />
       </section>
 

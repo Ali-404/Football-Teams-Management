@@ -21,9 +21,9 @@ import { FormatMoney } from "@/functions/format"
     
   ]
   
-  export function PlayerViewClubsHistory() {
+  export function PlayerViewClubsHistory(props) {
     return (
-        <div className={CardClasseName + "overflow-hidden p-6"}>
+        <div className={CardClasseName + "overflow-hidden p-6 " + props.className }>
         <Table>
             <TableCaption>A list of player's  clubes history.</TableCaption>
             <TableHeader>
