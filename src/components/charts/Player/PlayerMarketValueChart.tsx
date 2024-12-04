@@ -33,7 +33,7 @@ const chartConfig = {
 
 export function PlayerMarketValueChart() {
   return (
-    <Card className={CardClasseName + "h-auto "}>
+    <Card className={CardClasseName + "h-auto  "}>
       <CardHeader>
         <CardTitle>Market Value (F$)</CardTitle>
         <CardDescription>
